@@ -1,0 +1,92 @@
+/* Type */
+
+@font-face 
+	font-family: Replica
+	src: url('../fonts/replica/Replica-Bold.otf')
+
+.Replica
+	font-family: Replica
+	font-weight: normal
+	font-style: normal
+
+.Leitura
+	font-family: Leitura-Roman1
+	font-weight: normal
+	font-style: normal
+	i, em
+		font-family: Leitura-Italic1
+		font-weight: normal
+		font-style: normal
+
+
+.Leitura-Italic1
+	font-family: Leitura-Italic1
+	font-weight: normal
+	font-style: normal
+
+.Decima
+	font-family: DecimaMono-Light
+	font-weight: normal
+	font-style: normal
+
+.arial
+	font-family: Arial, sans-serif
+
+body
+	@extend .Replica
+	font-size: 16px
+	line-height: 1.5
+	color: $gray_dark
+	@media (min-width: $large_break)
+		font-size: 18px
+	@media (max-width: $tablet_break)
+		font-size: 14px
+	@media (max-width: $phone_break)
+		font-size: 12px 
+
+.huge_title
+	font-size: 4em //64
+	//line-height: 4.875em
+
+.medium_title
+	font-size: 2.625em //42
+	//line-height: 3.375em
+
+.regular_title
+	font-size: 2.250em //36
+	//line-height: 3em
+
+.small_title
+	font-size: 1.5em //24
+	//line-height: 2em
+
+.paragraph
+	font-size: 1em //16
+	//line-height: 1.5em
+
+.small_paragraph
+	font-size: .875em //14
+	//line-height: 1.25em
+
+p
+	margin-bottom: $bottom_margins
+	@extend .paragraph
+	
+
+h4, h3, h2, h1
+	margin-bottom: 1.25em
+
+h1
+	@extend .huge_title
+h2
+	@extend .medium_title
+h3
+	@extend .regular_title
+h4
+	@extend .small_title
+
+
+
+
+
+

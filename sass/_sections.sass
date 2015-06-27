@@ -1,0 +1,71 @@
+/* Sections */
+
+/* Home */
+
+.home_cover
+	min-height: 33.75em
+.home_cover_info
+	@include span(10)
+
+.feat_project
+	min-height: 41.875em
+	.feat_project_info
+		@include span(4)
+
+.feat_project_slider
+	@include span(12)
+	@extend .white_bg
+	position: relative
+	a.feat_project_slider_bttn
+		display: inline-block
+		width: 100%
+		height: 28.75em
+		cursor: pointer
+		background-size: contain
+		background-repeat: no-repeat
+		&:hover
+			background-position: -20% 0
+.feat_project_slider_info
+	@extend .inner_section_pad
+	@include span(6 at 7 of 12 isolate)
+
+/* Log */
+
+.log
+	> li
+		float: left
+		vertical-align: top
+		a
+			display: block
+			cursor: pointer
+			&:hover
+				opacity: .8
+		img
+			margin-bottom: 1.25em
+			width: 100%
+		p
+			margin-bottom: 2.5em
+
+.masonry
+	@include container
+.masonry_gutter
+	width: gutter()
+.masonry_column
+	width: span(4)
+.masonry_item
+	width: span(4)
+	margin-top: gutter()
+
+.twitter > div	
+	padding: 2.5em
+	margin-bottom: $bottom_margins
+
+/* Footer */
+
+footer
+	@extend .section_pad
+	ul
+		overflow: hidden
+		li
+			@include gallery(4 of 12)
+

@@ -1,0 +1,41 @@
+/* Susy Settings */
+
+// $susy: (columns: 12, global-box-sizing: border-box)
+
+$susy: (flow: ltr, output: float, math: fluid, column-width: false,	container: auto, container-position: center, last-flow: to, columns: 12, gutters: 1/4, gutter-position: after, global-box-sizing: bordert-box, debug: (image: show, color: rgba(#66f, .25), output: overlay, toggle: top right,))
+
+/* Susy Basics */
+
+// .container
+// 	@include container
+
+.wrap
+	@include container(90%)
+
+/* Patterns */
+
+*, *:before, *:after
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+/* Spacing */
+
+.section_pad
+	padding: 4.375em 0
+	@media (min-width: $large_break)
+		padding: 4em 0
+	@media (max-width: $tablet_break)
+		padding: 2em 0
+	@media (max-width: $phone_break)
+		padding: 1em 0
+
+.inner_section_pad
+	padding: 2.5em 0		
+
+.section_bottom_margins
+	margin-bottom: $bottom_margins_grid
+
+section
+	@extend .section_pad
+	position: relative

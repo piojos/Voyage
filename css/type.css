@@ -1,0 +1,64 @@
+/*
+Error: Undefined variable: "$bottom_margins".
+        on line 39 of /Applications/MAMP/htdocs/neueraidho/type.sass
+
+34: 
+35: strong
+36: 	@extend .bold
+37: 
+38: h1, h2
+39: 	margin-bottom: ($bottom_margins*0.5)
+40: 
+41: h3, h4, p
+42: 	margin-bottom: $bottom_margins
+43: 
+44: .text_header
+
+Backtrace:
+/Applications/MAMP/htdocs/neueraidho/type.sass:39
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/operation.rb:64:in `_perform'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:430:in `map'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `block in with_base'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:115:in `with_frame'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/stack.rb:79:in `with_base'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/tree/root_node.rb:20:in `render'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/engine.rb:268:in `render'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:404:in `run'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
+/Users/ornitoringo/Documents/Software/CodeKit.app/Contents/Resources/engines/scss/bin/sass:13:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$bottom_margins\".\A         on line 39 of /Applications/MAMP/htdocs/neueraidho/type.sass\A \A 34: \A 35: strong\A 36: 	@extend .bold\A 37: \A 38: h1, h2\A 39: 	margin-bottom: ($bottom_margins*0.5)\A 40: \A 41: h3, h4, p\A 42: 	margin-bottom: $bottom_margins\A 43: \A 44: .text_header"; }

@@ -1,0 +1,156 @@
+/* Color classes */
+
+.gray_dark
+	color: $gray_dark
+.gray_medium
+	color: $gray_medium
+.gray_regular
+	color: $gray_regular
+.gray_light
+	color: $gray_light
+.red
+	color: $red
+.white
+	color: $white
+
+.gray_dark_bg
+	background-color: $gray_dark
+.gray_medium_bg
+	background-color: $gray_medium
+.gray_regular_bg
+	background-color: $gray_regular
+.gray_light_bg
+	background-color: $gray_light
+.red_bg
+	background-color: $red
+.white_bg
+	background-color: $white
+
+/* Animation */
+
+@mixin transition($transition-property, $transition-time, $method)
+	-webkit-transition: $transition-property $transition-time $method
+	-moz-transition: $transition-property $transition-time $method
+	-ms-transition: $transition-property $transition-time $method
+	-o-transition: $transition-property $transition-time $method
+	transition: $transition-property $transition-time $method
+
+*, *:before, *:after
+	@include transition(all, 0.1s, ease-in-out)
+
+/* Links */
+
+a
+	color: inherit
+	text-decoration: none
+
+/* Images */
+
+.transp_back_image
+	content: ""
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-repeat: no-repeat
+	background-position: top center
+	background-size: cover
+	opacity: 1
+	z-index: -1
+
+
+/* Top Nav */
+
+header
+	height: 5.125em
+	@extend .white_bg
+	#nav_logo
+		float: left
+		padding: 0.45em 0
+		margin-bottom: 0
+	#nav
+		float: right
+		li
+			width: 8.75em
+			height: inherit
+			float: left
+			text-align: center
+			a
+				display: inline-block
+				padding: 1.8em 2.063em
+				&:hover
+					@extend .red_bg
+					color: $white
+
+
+/* Bottom Nav (Extended Nav) */
+
+
+.e_nav1
+	@include span(10 at 2 of 12 isolate)
+	@include clearfix
+	margin-bottom: $bottom_margins_grid
+	position: relative
+	a.nav1_bttn 
+		display: inline-block
+		width: 100%
+		height: 15em
+		cursor: pointer
+		> div:first-child
+			@include span(4 of 10)
+			min-height: 100%
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: top center
+		> div:nth-child(2)
+			@include span(5 at 5 of 10)
+			@extend .inner_section_pad
+		// &:hover
+		// 	> div:nth-child(2)
+		// 		margin-top: .1em
+
+.e_nav_bottom
+	@extend .section_pad
+	position: relative
+.e_nav2
+	@include span(6)
+.e_nav3
+	@include span(6 last)
+.e_nav2, .e_nav3
+	@include clearfix
+	a.nav2_bttn
+		display: inline-block
+		width: 100%
+		height: 15em
+		cursor: pointer
+		position: relative
+		background-color: $white
+		> div:first-child
+			@include span(2 of 6)
+			min-height: 100%
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: top center
+		> div:nth-child(2)
+			@include span(4 at 3 of 6)
+			@extend .inner_section_pad
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
