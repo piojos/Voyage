@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
 Footer Template
@@ -25,20 +25,20 @@ Neue Raidho Website
 					<a href="#">Facebook</a><br>
 					<a href="#">Instagram</a><br>
 					<a href="#">Dribbble</a><br>
-					<a href="#">Twitter</a>				
+					<a href="#">Twitter</a>
 				</li>
 			</ul>
 			<p class="Leitura">All rights reserved ©Raidho 2015<br>
 			See our Privacy Statement (<i><a href="#">ver el Aviso de Privacidad</a></i>).
 			</p>
-	</div>		
+	</div>
 	</footer>
 
 	<script type="text/javascript">
 
 		// Masonry activation + imagesLoaded with jQuery
 		var $container = $('.masonry');
-		// initialize Masonry after all images have loaded  
+		// initialize Masonry after all images have loaded
 		$container.imagesLoaded( function() {
 		  $container.masonry({
 			columnWidth: '.masonry_column',
@@ -46,7 +46,7 @@ Neue Raidho Website
 			itemSelector: '.masonry_item'
 			});
 		});
-	
+
 	</script>
 
 </body>

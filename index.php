@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
 Home Template
@@ -20,7 +20,7 @@ include "templates/header.php";
 	<section class="feat_project">
 		<div class="wrap">
 			<div class="feat_project_info">
-				<h2><span class="white">Featured Project Linda did this:</span> Brand Redesign for Major Hospital ABC.</h2>
+				<h2><span class="white">Featured Project:</span> Brand Redesign for Major Hospital ABC.</h2>
 				<p class="Decima">After more than 25 years without a major brand redesign, we had the opportunity to completely revamp the brand and visual identity for this 120 years old hospital.</p>
 				<p class="Decima white"><a href="#">Read the full story →</a></p>
 			</div>
@@ -44,7 +44,7 @@ include "templates/header.php";
 
 	</section>
 
-	<section id="loader" class="wrap">		
+	<section id="loader" class="wrap">
 		<h2 class="Decima">Recent Activity</h2>
 		<ul class="log masonry">
 			<!-- Masonry gutter sizer -->
@@ -93,7 +93,7 @@ include "templates/header.php";
 		</ul>
 	</section>
 
-<?php 
+<?php
 
 /*
 Extended Nav + Footer

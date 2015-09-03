@@ -1,6 +1,6 @@
 /* Type */
 
-@font-face 
+@font-face
 	font-family: Replica
 	src: url('../fonts/replica/Replica-Bold.otf')
 
@@ -42,36 +42,53 @@ body
 	@media (max-width: $tablet_break)
 		font-size: 14px
 	@media (max-width: $phone_break)
-		font-size: 12px 
+		font-size: 12px
 
 .huge_title
-	font-size: 4em //64
 	//line-height: 4.875em
+	font-size: 4em //64
+	@media (max-width: $tablet_break)
+		font-size: 3em
+	@media (max-width: $phone_break)
+		font-size: 2em
 
 .medium_title
-	font-size: 2.625em //42
 	//line-height: 3.375em
+	font-size: 2.625em //42
+	@media (max-width: $tablet_break)
+		font-size: 1.96875em
+	@media (max-width: $phone_break)
+		font-size: 1.3125em
 
 .regular_title
-	font-size: 2.250em //36
 	//line-height: 3em
+	font-size: 2.25em //36
+	@media (max-width: $tablet_break)
+		font-size: 1.6875em
+	@media (max-width: $phone_break)
+		font-size: 1.125em
+
 
 .small_title
-	font-size: 1.5em //24
 	//line-height: 2em
+	font-size: 1.5em //24
+	@media (max-width: $tablet_break)
+		font-size: 1.125em
+	@media (max-width: $phone_break)
+		font-size: 0.75em
 
 .paragraph
-	font-size: 1em //16
 	//line-height: 1.5em
+	font-size: 1em //16
 
 .small_paragraph
-	font-size: .875em //14
 	//line-height: 1.25em
+	font-size: .875em //14
 
 p
 	margin-bottom: $bottom_margins
 	@extend .paragraph
-	
+
 
 h4, h3, h2, h1
 	margin-bottom: 1.25em
@@ -84,9 +101,3 @@ h3
 	@extend .regular_title
 h4
 	@extend .small_title
-
-
-
-
-
-

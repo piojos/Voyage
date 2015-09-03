@@ -2,22 +2,33 @@
 
 // $susy: (columns: 12, global-box-sizing: border-box)
 
-$susy: (flow: ltr, output: float, math: fluid, column-width: false,	container: auto, container-position: center, last-flow: to, columns: 12, gutters: 1/4, gutter-position: after, global-box-sizing: bordert-box, debug: (image: show, color: rgba(#66f, .25), output: overlay, toggle: top right,))
+$susy: (flow: ltr, output: float, math: fluid, column-width: false,	container: auto, container-position: center, last-flow: to, columns: 12, gutters: 1/4, gutter-position: after, global-box-sizing: bordert-box)
+
+// debug: (image: show, color: rgba(#66f, .25), output: overlay, toggle: top right,)
 
 /* Susy Basics */
 
 // .container
 // 	@include container
 
+/* Makes border-box properties */
+@include border-box-sizing
+
 .wrap
 	@include container(90%)
+	@media (min-width: $large_break)
+		@include container(70%)
+	@media (max-width: $tablet_break)
+		@include container(95%)
+	@media (max-width: $phone_break)
+		@include container(98%)
 
 /* Patterns */
 
-*, *:before, *:after
-	-moz-box-sizing: border-box
-	-webkit-box-sizing: border-box
-	box-sizing: border-box
+// *, *:before, *:after
+// 	-moz-box-sizing: border-box
+// 	-webkit-box-sizing: border-box
+// 	box-sizing: border-box
 
 /* Spacing */
 
@@ -31,7 +42,7 @@ $susy: (flow: ltr, output: float, math: fluid, column-width: false,	container: a
 		padding: 1em 0
 
 .inner_section_pad
-	padding: 2.5em 0		
+	padding: 2.5em 0
 
 .section_bottom_margins
 	margin-bottom: $bottom_margins_grid
