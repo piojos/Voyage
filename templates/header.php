@@ -31,7 +31,7 @@ Neue Raidho Website
 			<h3 id="nav_logo">RAIDHO</h3>
 
 			<ul id="nav" class="Decima">
-				<li class="tablet_hide"><a href="index.php">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><a href="about.php">About</a></li>
 				<li><a href="work.php">Work</a></li>
 				<li><a href="services.php">Services</a></li>

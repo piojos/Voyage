@@ -68,3 +68,41 @@ footer
 		overflow: hidden
 		li
 			@include gallery(4 of 12)
+
+/* About */
+
+.about_intro div
+	@include gallery(6)
+	h4
+		margin-bottom: $bottom_margins
+	img
+		width: 90%
+		margin-bottom: $bottom_margins
+
+.people_founders,
+.people_team
+	padding: gutter()
+	@include clearfix
+	img
+		width: 100%
+		margin-bottom: $bottom_margins
+	h4
+		margin-bottom: 0
+	p
+		margin-bottom: 0
+	a
+		color: $red
+.people_founders div
+	@include gallery(6 of 12)
+	margin-bottom: $bottom_margins
+	&:last-child
+		@include last
+.people_team div
+	@include gallery(4 of 12)
+	margin-bottom: $bottom_margins
+	&:last-child
+		@include last
+	@media (max-width: $phone_break)
+		@include gallery(6 of 12)
+		&:last-child
+			@include last

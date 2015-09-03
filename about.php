@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
 Home Template
@@ -8,24 +8,28 @@ Neue Raidho Website
 include "templates/header.php";
 
 ?>
-	
+
 <section id="about">
 
 	<div class="wrap">
 		<div>
 			<h2 class="Decima">About our Studio</h2>
-			<h1 class="Leitura">Raidho is the name of an r-rune, describing the concepts of "<em>ride, or journey</em>". That’s the simple idea upon which our studio was founded back in 2012.</h1>
+			<h1 class="Leitura"><span class="red">Raidho</span> is the name of an r-rune, describing the concepts of "<em>ride, or journey</em>". That’s the simple idea upon which our studio was founded back in 2012.</h1>
 		</div>
 	</div>
 
-	<img src="http://lorempixel.com/1280/740/technics">
+	<img class="full_width_image" src="http://lorempixel.com/1280/740/technics">
 
 	<div class="wrap">
-		<div>
-			<img src="http://lorempixel.com/600/600/technics">
-			<h4>We work for a wide range of national and international clients, from Government Nanotechnology Clusters to Non-for-profit innovative organizations.</h4>
-			<h4>We also involve frequently with technology and design startups, getting to know them well and helping them improve the value of their products and services through rich media design and effective communication.</h4>
-			<img src="http://lorempixel.com/600/600/technics">
+		<div class="Decima about_intro">
+			<div>
+				<img src="http://lorempixel.com/540/540/technics">
+				<h4>We work for a wide range of national and international clients, from Government Nanotechnology Clusters to Non-for-profit innovative organizations.</h4>
+			</div>
+			<div>
+				<h4>We also involve frequently with technology and design startups, getting to know them well and helping them improve the value of their products and services through rich media design and effective communication.</h4>
+				<img src="http://lorempixel.com/540/540/technics">
+			</div>
 		</div>
 	</div>
 
@@ -52,60 +56,60 @@ include "templates/header.php";
 		<h2>People at Raidho</h2>
 
 		<div class="people_founders">
-			<div>			
+			<div>
 				<img src="http://lorempixel.com/600/600/technics">
-				<h3>Alejandro Ruiz</h3>
-				<p>
+				<h4>Alejandro Ruiz</h4>
+				<p class="Decima">
 				Founder & Business Dev<br>
 				<a href="mailto:ruiz@raidho.mx">ruiz@raidho.mx</a>
 				</p>
 			</div>
-			<div>			
+			<div>
 				<img src="http://lorempixel.com/600/600/technics">
-				<h3>Daniel Miranda</h3>
-				<p>
+				<h4>Daniel Miranda</h4>
+				<p class="Decima">
 				Founder & Lead Coder<br>
 				<a href="mailto:miranda@raidho.mx">miranda@raidho.mx</a>
 				</p>
 			</div>
-			<div>			
+			<div>
 				<img src="http://lorempixel.com/600/600/technics">
-				<h3>David Quiroga</h3>
-				<p>
+				<h4>David Quiroga</h4>
+				<p class="Decima">
 				Founder & Art Director<br>
 				<a href="mailto:quiroga@raidho.mx">quiroga@raidho.mx</a>
 				</p>
 			</div>
-			<div>			
+			<div>
 				<img src="http://lorempixel.com/600/600/technics">
-				<h3>Francisco Martínez</h3>
-				<p>
+				<h4>Francisco Martínez</h4>
+				<p class="Decima">
 				Founder & Lead Interaction Designer<br>
 				<a href="mailto:martinez@raidho.mx">martinez@raidho.mx</a>
 				</p>
 			</div>
 		</div>
 		<div class="people_team">
-			<div>			
+			<div>
 				<img src="http://lorempixel.com/600/600/technics">
-				<h4>Miguel Balandrano</h4>
-				<p>
+				<p>Miguel Balandrano</p>
+				<p class="Decima">
 				Designer<br>
 				<a href="mailto:acider@raidho.mx">acider@raidho.mx</a>
 				</p>
 			</div>
-			<div>			
+			<div>
 				<img src="http://lorempixel.com/600/600/technics">
-				<h4>Linda Castillo</h4>
-				<p>
+				<p>Linda Castillo</p>
+				<p class="Decima">
 				Designer & Coder<br>
 				<a href="mailto:linda@raidho.mx">linda@raidho.mx</a>
 				</p>
 			</div>
-			<div>			
+			<div>
 				<img src="http://lorempixel.com/600/600/technics">
-				<h4>Rocko Raidho</h4>
-				<p>
+				<p>Rocko Raidho</p>
+				<p class="Decima">
 				PR Strategist<br>
 				<a href="mailto:rocko@raidho.mx">rocko@raidho.mx</a>
 				</p>
@@ -130,5 +134,3 @@ include "templates/header.php";
 	</section>
 
 <?php include "templates/footer.php"; ?>
-
-

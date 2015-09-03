@@ -249,10 +249,6 @@ section {
 .white_bg, header, .feat_project_slider {
   background-color: #ffffff; }
 
-/* Responsive hides */
-.tablet_hide {
-  color: green; }
-
 /* Animation */
 *, *:before, *:after {
   -webkit-transition: all 0.1s ease-in-out;
@@ -279,6 +275,10 @@ a {
   background-size: cover;
   opacity: 1;
   z-index: -1; }
+
+.full_width_image {
+  width: 100%;
+  margin-bottom: 4em; }
 
 /* Top Nav */
 header {
@@ -465,6 +465,98 @@ footer ul {
       margin-left: 67.79661%;
       margin-right: -100%;
       clear: none; }
+
+/* About */
+.about_intro div {
+  width: 49.15254%;
+  float: left; }
+  .about_intro div:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0; }
+  .about_intro div:nth-child(2n + 2) {
+    margin-left: 50.84746%;
+    margin-right: -100%;
+    clear: none; }
+  .about_intro div h4 {
+    margin-bottom: 1.5em; }
+  .about_intro div img {
+    width: 90%;
+    margin-bottom: 1.5em; }
+
+.people_founders,
+.people_team {
+  padding: 1.69492%;
+  overflow: hidden;
+  *zoom: 1; }
+  .people_founders img,
+  .people_team img {
+    width: 100%;
+    margin-bottom: 1.5em; }
+  .people_founders h4,
+  .people_team h4 {
+    margin-bottom: 0; }
+  .people_founders p,
+  .people_team p {
+    margin-bottom: 0; }
+  .people_founders a,
+  .people_team a {
+    color: #dd1919; }
+
+.people_founders div {
+  width: 49.15254%;
+  float: left;
+  margin-bottom: 1.5em; }
+  .people_founders div:nth-child(2n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0; }
+  .people_founders div:nth-child(2n + 2) {
+    margin-left: 50.84746%;
+    margin-right: -100%;
+    clear: none; }
+  .people_founders div:last-child {
+    float: right;
+    margin-right: 0; }
+
+.people_team div {
+  width: 32.20339%;
+  float: left;
+  margin-bottom: 1.5em; }
+  .people_team div:nth-child(3n + 1) {
+    margin-left: 0;
+    margin-right: -100%;
+    clear: both;
+    margin-left: 0; }
+  .people_team div:nth-child(3n + 2) {
+    margin-left: 33.89831%;
+    margin-right: -100%;
+    clear: none; }
+  .people_team div:nth-child(3n + 3) {
+    margin-left: 67.79661%;
+    margin-right: -100%;
+    clear: none; }
+  .people_team div:last-child {
+    float: right;
+    margin-right: 0; }
+  @media (max-width: 620px) {
+    .people_team div {
+      width: 49.15254%;
+      float: left; }
+      .people_team div:nth-child(2n + 1) {
+        margin-left: 0;
+        margin-right: -100%;
+        clear: both;
+        margin-left: 0; }
+      .people_team div:nth-child(2n + 2) {
+        margin-left: 50.84746%;
+        margin-right: -100%;
+        clear: none; }
+      .people_team div:last-child {
+        float: right;
+        margin-right: 0; } }
 
 /* Complimenary Styles */
 /* Color pallete */
