@@ -1,0 +1,24 @@
+.bl-party-three-one-caption
+	div:nth-child(1)
+		width: 50%
+		float: left
+	div:nth-child(2)
+		width: 50%
+		float: right
+	div:nth-child(3)
+		width: 50%
+		float: right
+		@include clearfix
+
+
+.bl-party-three-w-captions
+	@extend .section_pad
+	ul
+		overflow: hidden
+		li
+			@include gallery(4 of 12)
+			padding: gutter()
+			@include clearfix
+			img
+				width: 100%
+				margin-bottom: $bottom_margins
