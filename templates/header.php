@@ -5,6 +5,8 @@ Header Template
 Neue Raidho Website
 */
 
+global $bclass;
+
 ?>
 <html>
 <head>
@@ -23,7 +25,7 @@ Neue Raidho Website
 	<script src="js/imagesloaded.pkgd.js"></script>
 </head>
 
-<body>
+<body <?php echo 'class="'.$bclass.'"'; ?> >
 
 	<header>
 
