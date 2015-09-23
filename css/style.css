@@ -579,6 +579,8 @@ footer ul {
   float: right;
   overflow: hidden;
   *zoom: 1; }
+.bl-party-three-one-caption div img {
+  width: 100%; }
 
 .bl-party-three-w-captions ul {
   overflow: hidden; }
@@ -604,5 +606,43 @@ footer ul {
     .bl-party-three-w-captions ul li img {
       width: 100%;
       margin-bottom: 1.5em; }
+
+.bl-party-two-no-captions {
+  overflow: hidden; }
+  .bl-party-two-no-captions div {
+    width: 50%;
+    float: left; }
+    .bl-party-two-no-captions div:nth-child(2n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .bl-party-two-no-captions div:nth-child(2n + 2) {
+      margin-left: 50%;
+      margin-right: -100%;
+      clear: none; }
+    .bl-party-two-no-captions div img {
+      width: 100%; }
+
+.bl-party-three-no-captions {
+  overflow: hidden; }
+  .bl-party-three-no-captions div {
+    width: 33.33333%;
+    float: left; }
+    .bl-party-three-no-captions div:nth-child(3n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .bl-party-three-no-captions div:nth-child(3n + 2) {
+      margin-left: 33.33333%;
+      margin-right: -100%;
+      clear: none; }
+    .bl-party-three-no-captions div:nth-child(3n + 3) {
+      margin-left: 66.66667%;
+      margin-right: -100%;
+      clear: none; }
+    .bl-party-three-no-captions div img {
+      width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

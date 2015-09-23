@@ -42,17 +42,30 @@ include "templates/header.php";
         <ul>
             <li>
                 <img src="http://lorempixel.com/380/300/technics">
-                <p class="small_paragraph">1886 - Hospital Americano</p>
+                <p class="small_paragraph Decima">1886 - Hospital Americano</p>
             </li>
             <li>
                 <img src="http://lorempixel.com/380/300/technics">
-                <p class="small_paragraph">1923 - Hospital Inglés</p>
+                <p class="small_paragraph Decima">1923 - Hospital Inglés</p>
             </li>
             <li>
                 <img src="http://lorempixel.com/380/300/technics">
-                <p class="small_paragraph">1941 - Centro Médico ABC American British Cowdray</p>
+                <p class="small_paragraph Decima">1941 - Centro Médico ABC American British Cowdray</p>
             </li>
         <ul>
+    </div>
+
+    <?php // two pics no caption ?>
+    <div class="bl-party-two-no-captions">
+        <div><img src="http://lorempixel.com/640/374/technics"></div>
+        <div><img src="http://lorempixel.com/640/374/technics"></div>
+    </div>
+
+    <?php // three pics no caption ?>
+    <div class="bl-party-three-no-captions">
+        <div><img src="http://lorempixel.com/640/374/technics"></div>
+        <div><img src="http://lorempixel.com/640/374/technics"></div>
+        <div><img src="http://lorempixel.com/640/374/technics"></div>
     </div>
 
 
@@ -61,16 +74,32 @@ include "templates/header.php";
 
 block: images random grid
 
-block: two images no caption
-
-block: three images no caption
-
 block: slider
 
 block: share
 
-block: more projects
 </pre>
+
+<?php // more projects ?>
+<section class="gray_light_bg">
+    <div class="wrap bl-party-three-w-captions">
+        <h2 class="Decima">Explore More Projects</h2>
+        <ul>
+            <li>
+                <img src="http://lorempixel.com/380/380/technics">
+                <p>Penguin Books. <span class="Leitura">An Expanding Universe Keynote.</span></p>
+            </li>
+            <li>
+                <img src="http://lorempixel.com/380/380/technics">
+                <p>Comunidad VIVEX. <span class="Leitura">Re-defining the News in Mexico.</span></p>
+            </li>
+            <li>
+                <img src="http://lorempixel.com/380/380/technics">
+                <p>Knock your Wear. <span class="Leitura">Professional Image Consulting.</span></p>
+            </li>
+        <ul>
+    </div>
+</section>
 
 
 <?php

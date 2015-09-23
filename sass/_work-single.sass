@@ -9,6 +9,8 @@
 		width: 50%
 		float: right
 		@include clearfix
+	div img
+		width: 100%
 
 
 .bl-party-three-w-captions
@@ -22,3 +24,16 @@
 			img
 				width: 100%
 				margin-bottom: $bottom_margins
+
+.bl-party-two-no-captions
+	overflow: hidden
+	div
+		@include gallery(6 of 12 0)
+		img
+			width: 100%
+.bl-party-three-no-captions
+	overflow: hidden
+	div
+		@include gallery(4 of 12 0)
+		img
+			width: 100%
