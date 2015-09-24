@@ -75,7 +75,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.Decima {
+.Decima, .btn, form input, form select, form textarea, form button, form input[type=submit] {
   font-family: DecimaMono-Light;
   font-weight: normal;
   font-style: normal; }
@@ -374,6 +374,65 @@ header {
       width: 83.05085%;
       float: left;
       margin-right: 1.69492%; } }
+
+/* Contact Call to Action banner */
+.contact-banner {
+  background: #2f2f2f;
+  color: #ffffff; }
+  .contact-banner ul {
+    overflow: hidden;
+    margin-bottom: 1.5em; }
+    .contact-banner ul li {
+      display: inline-block;
+      margin-right: 1em; }
+
+.btn {
+  background-color: #dd1919;
+  padding: 10px 30px;
+  margin-bottom: 1.5em;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.3s;
+  opacity: 0.9; }
+  .btn:hover {
+    opacity: 1; }
+
+/* Forms */
+form input, form select, form textarea {
+  color: #2f2f2f;
+  width: 100%;
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  text-shadow: none;
+  font-size: inherit;
+  text-align: left;
+  transition: all 0.3s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0.9; }
+  form input:hover, form select:hover, form textarea:hover {
+    opacity: 1; }
+form button, form input[type=submit] {
+  min-width: 6em;
+  font-size: 1em;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  display: inline-block;
+  transition: all 0.3s;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #dd1919;
+  border: none;
+  border-radius: 5px;
+  text-shadow: none;
+  opacity: 0.9; }
+  form button:hover, form input[type=submit]:hover {
+    opacity: 1; }
 
 /* Sections */
 /* Home */
