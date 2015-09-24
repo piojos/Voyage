@@ -3,6 +3,8 @@
 /*
 Single Work Template
 Neue Raidho Website					:	50%
+Missing:
+- Slider template (Linda)
 */
 
 $bclass = "page";
@@ -93,14 +95,6 @@ include "templates/header.php";
             <img class="rand-grid-img-8" src="http://lorempixel.com/380/240/technics">
         </div>
     </div>
-
-
-
-<pre>
-
-block: slider
-
-</pre>
 
 <?php // share this project ?>
 <section class="contact-banner">
