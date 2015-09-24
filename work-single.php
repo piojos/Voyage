@@ -1,9 +1,11 @@
 <?php
+
 /*
 Single Work Template
-Neue Raidho Website
+Neue Raidho Website					:	50%
 */
 
+$bclass = "page";
 include "templates/header.php";
 ?>
 
@@ -68,11 +70,33 @@ include "templates/header.php";
         <div><img src="http://lorempixel.com/640/374/technics"></div>
     </div>
 
+    <?php // random grid ?>
+    <div class="wrap bl-party-random-grid section_pad">
+        <div class="rand-grid-a left">
+            <div class="rand-grid-a-top">
+                <img class="rand-grid-img-1" src="http://lorempixel.com/480/355/technics">
+            </div>
+            <div class="rand-grid-a-bottom">
+                <div>
+                    <img class="rand-grid-img-2" src="http://lorempixel.com/380/240/technics">
+                    <img class="rand-grid-img-3" src="http://lorempixel.com/280/260/technics">
+                </div>
+                <div>
+                    <img class="rand-grid-img-4" src="http://lorempixel.com/380/770/technics">
+                </div>
+            </div>
+        </div>
+        <div class="rand-grid-c right">
+            <img class="rand-grid-img-5" src="http://lorempixel.com/280/260/technics">
+            <img class="rand-grid-img-6" src="http://lorempixel.com/380/240/technics">
+            <img class="rand-grid-img-7" src="http://lorempixel.com/280/260/technics">
+            <img class="rand-grid-img-8" src="http://lorempixel.com/380/240/technics">
+        </div>
+    </div>
 
 
-    <pre>
 
-block: images random grid
+<pre>
 
 block: slider
 

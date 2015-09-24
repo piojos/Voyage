@@ -17,7 +17,7 @@ $susy: (flow: ltr, output: float, math: fluid, column-width: false,	container: a
 .wrap
 	@include container(90%)
 	@media (min-width: $large_break)
-		@include container(70%)
+		@include container(80%)
 	@media (max-width: $tablet_break)
 		@include container(95%)
 	@media (max-width: $phone_break)
@@ -29,6 +29,10 @@ $susy: (flow: ltr, output: float, math: fluid, column-width: false,	container: a
 // 	-moz-box-sizing: border-box
 // 	-webkit-box-sizing: border-box
 // 	box-sizing: border-box
+.left
+	float: left
+.right
+	float: right
 
 /* Spacing */
 

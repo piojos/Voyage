@@ -37,3 +37,26 @@
 		@include gallery(4 of 12 0)
 		img
 			width: 100%
+
+.bl-party-random-grid
+	img
+		margin-bottom: 1em
+	div
+		overflow: hidden
+	.rand-grid-a
+		width: span(8)
+		.rand-grid-a-top
+			width: span(8 of 8)
+		.rand-grid-a-bottom
+			width: span(8 of 8)
+			div
+				@include gallery(4 of 8)
+	.rand-grid-c
+		width: span(4)
+	@media (max-width: $tablet_break)
+		img
+			width: 100%
+//
+	img.rand-grid-img-1
+	img.rand-grid-img-2
+	img.rand-grid-img-3
