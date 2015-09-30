@@ -12,18 +12,22 @@
 	div img
 		width: 100%
 
-
-.bl-party-three-w-captions
-	@extend .section_pad
+.bl-party-four-w-captions,
+.bl-party-three-w-captions,
+.bl-party-two-w-captions
 	ul
 		overflow: hidden
 		li
-			@include gallery(4 of 12)
-			padding: gutter()
 			@include clearfix
 			img
 				width: 100%
 				margin-bottom: $bottom_margins
+.bl-party-four-w-captions ul li
+	@include gallery(3 of 12)
+.bl-party-three-w-captions ul li
+	@include gallery(4 of 12)
+.bl-party-two-w-captions ul li
+	@include gallery(6 of 12)
 
 .bl-party-two-no-captions
 	overflow: hidden
