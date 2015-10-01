@@ -54,3 +54,17 @@ $susy: (flow: ltr, output: float, math: fluid, column-width: false,	container: a
 section
 	@extend .section_pad
 	position: relative
+
+/* Basic Grids */
+.basic_grid
+	overflow: hidden
+
+.two_col_grid > div,
+.two_col_grid > li
+	@include gallery(6 of 12)
+.three_col_grid > div,
+.three_col_grid > li
+	@include gallery(4 of 12)
+.four_col_grid > div,
+.four_col_grid > li
+	@include gallery(3 of 12)

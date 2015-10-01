@@ -106,3 +106,14 @@ footer
 		@include gallery(6 of 12)
 		&:last-child
 			@include last
+
+/* Services */
+
+#services + #extended_nav
+	margin-top: -$bottom_margins_grid
+.border_section
+	@extend .section_pad
+	border-top: 1px solid $gray_light
+.back_img_quote
+	@extend .section_pad
+	color: white

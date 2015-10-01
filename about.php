@@ -18,7 +18,9 @@ include "templates/header.php";
 		</div>
 	</div>
 
-	<img class="full_width_image" src="http://lorempixel.com/1280/740/technics">
+	<div class="section_bottom_margins">
+		<img class="full_width_image" src="http://lorempixel.com/1280/740/technics">
+	</div>
 
 	<div class="wrap">
 		<div class="Decima about_intro">
