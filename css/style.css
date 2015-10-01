@@ -75,7 +75,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.Decima, .btn, form input, form select, form textarea, form button, form input[type=submit] {
+.Decima, #dev_nav li, .btn, form input, form select, form textarea, form button, form input[type=submit] {
   font-family: DecimaMono-Light;
   font-weight: normal;
   font-style: normal; }
@@ -136,7 +136,7 @@ body {
 .paragraph, p {
   font-size: 1em; }
 
-.small_paragraph {
+.small_paragraph, #dev_nav li {
   font-size: 0.875em; }
 
 p {
@@ -371,6 +371,16 @@ header {
         padding: 1.8em 2.063em; }
         header #nav li a:hover {
           color: #ffffff; }
+
+#dev_nav {
+  display: none;
+  position: absolute; }
+  #dev_nav li {
+    display: inline-block;
+    padding-right: 1.5em;
+    color: #CECECE; }
+    #dev_nav li a:hover {
+      color: #dd1919; }
 
 /* Bottom Nav (Extended Nav) */
 .e_nav1 {
