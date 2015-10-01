@@ -15,19 +15,21 @@ global $bclass;
 	<meta name="keywords" content=" ">
 	<meta name="author" content=" ">
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/responsivemenu.css">
-	<link rel="stylesheet" type="text/css" href="fonts/leitura/MyFontsWebfontsKit.css">
-	<link rel="stylesheet" type="text/css" href="fonts/decima/MyFontsWebfontsKit.css">
+	<title><?php wp_title(); ?></title>
+
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/responsivemenu.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/leitura/MyFontsWebfontsKit.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/decima/MyFontsWebfontsKit.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-	<script src="js/masonry.pkgd.js"></script>
-	<script src="js/imagesloaded.pkgd.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/masonry.pkgd.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/imagesloaded.pkgd.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
 
 </head>
 
-<body <?php echo 'class="'.$bclass.'"'; ?> >
+<body <?php body_class($bclass); ?> >
 
 	<header>
 
@@ -52,5 +54,5 @@ global $bclass;
 			</ul>
 
 		</div>
-
+	<?php wp_head(); ?>
 	</header>
