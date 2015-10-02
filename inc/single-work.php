@@ -8,24 +8,80 @@ Missing:
 */
 
 $bclass = "page";
-include "templates/header.php";
 ?>
 
     <?php /* LINDA: añadir funcionalidad de slider más adelante */ ?>
-	<div class="section_bottom_margins">
-		<img class="full_width_image" src="http://lorempixel.com/1280/740/technics">
+	<div class="section_bottom_margins"><?php
+
+		$images = get_field('cover-slider');
+		$imgCount = count( $images );
+
+		if($imgCount == 1) {
+
+			if( $images ):
+				foreach( $images as $image ): ?>
+					<picture>
+						<img class="full_width_image"
+							 src="<?php echo $image['sizes']['larger']; ?>"
+							 <?php echo tevkori_get_srcset_string( $image['ID'], 'huge' ); ?>
+							 alt="<?php echo $image['alt']; ?>" />
+					</picture><?php
+				endforeach;
+			endif;
+
+		} else {	/* ?>
+
+			<div id="slider" class="flexslider">
+				<?php foreach( $images as $image ): ?>
+					<div class="slide">
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<p><?php echo $image['caption']; ?></p>
+					</div>
+				<?php endforeach; ?>
+			</div><?php */
+			
+		} ?>
 	</div>
 
-    <div class="wrap">
+	<div class="wrap">
 		<div>
-            <h1>Centro Médico ABC</h1>
-            <h2 class="Leitura">American British Cowdray</h2>
+			<h1><?php the_title(); ?></h1>
+			<h2 class="Leitura"><?php the_field('subtitle'); ?></h2>
+			<h2 class="Leitura"><?php the_field('excerpt'); ?></h2>
+		</div>
+	</div><?php
 
-            <h2 class="Leitura">After more than 25 years without a major brand redesign, we had the opportunity to completely revamp the brand and visual identity for this 130 years old hospital.</h2>
-        </div>
-    </div>
 
-    <?php // three pics one caption ?>
+
+
+// Loop for Modules
+while ( have_rows('blocks') ) : the_row();
+
+	if( get_row_layout() == 'titling' ) :				// Titles
+
+		if(get_sub_field('bg-img')) { ?>
+			<div class="back_img_quote" style="background-image: url(img/home_cover_back.jpg)"> <?php
+		} ?>
+			<div class="wrap">
+				<div>
+					<p class="blue Decima"><?php the_sub_field('title'); ?></p>
+					<p class="Leitura medium_title"><?php the_sub_field('content'); ?></p>
+				</div>
+			</div><?php
+		if(get_sub_field('bg-img')) { ?>
+			</div> <?php
+		}
+
+
+	// elseif( get_row_layout() == 'imagenes' ) :
+	// 	echo 'images block';
+
+
+	endif;
+endwhile; ?>
+
+
+    <?php /* // three pics one caption ?>
     <div class="bl-party-three-one-caption">
         <div><img src="http://lorempixel.com/640/750/technics"></div>
         <div><img src="http://lorempixel.com/640/374/technics"></div>
@@ -35,13 +91,9 @@ include "templates/header.php";
         </div>
     </div>
 
-    <?php // titles ?>
-    <div class="wrap">
-        <div>
-            <p class="blue Decima">Centro Médico ABC</p>
-            <p class="Leitura medium_title">The ABC Hospital is ore than 120 years old, and it hadn’t undergo any major brand identity revamp since almost 20 years.</p>
-        </div>
-    </div>
+
+
+
 
     <?php // three images with caption ?>
     <div class="wrap bl-party-three-w-captions">
@@ -61,11 +113,18 @@ include "templates/header.php";
         <ul>
     </div>
 
+
+
+
+
     <?php // two pics no caption ?>
     <div class="bl-party-two-no-captions">
         <div><img src="http://lorempixel.com/640/374/technics"></div>
         <div><img src="http://lorempixel.com/640/374/technics"></div>
     </div>
+
+
+
 
     <?php // three pics no caption ?>
     <div class="bl-party-three-no-captions">
@@ -98,7 +157,10 @@ include "templates/header.php";
         </div>
     </div>
 
-<?php include "templates/contact_share.php"; ?>
+
+
+
+<?php get_template_part('inc/contact_share'); ?>
 
 <?php // more projects ?>
 <section class="gray_light_bg">
@@ -119,14 +181,4 @@ include "templates/header.php";
             </li>
         <ul>
     </div>
-</section>
-
-<?php
-
-/*
-Extended Nav + Footer
-*/
-
-include "templates/footer.php";
-
-?>
+</section> */ ?>

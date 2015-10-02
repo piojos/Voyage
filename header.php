@@ -27,6 +27,7 @@ global $bclass;
 	<script src="<?php bloginfo('template_url'); ?>/js/imagesloaded.pkgd.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
 
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class($bclass); ?> >
