@@ -19,6 +19,7 @@ global $bclass;
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/responsivemenu.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/shame.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/leitura/MyFontsWebfontsKit.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/decima/MyFontsWebfontsKit.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
