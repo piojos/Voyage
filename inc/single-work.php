@@ -8,6 +8,7 @@ Missing:
 */
 
 $bclass = "page";
+$A = 'A';
 ?>
 
     <?php /* LINDA: añadir funcionalidad de slider más adelante */ ?>
@@ -34,12 +35,16 @@ $bclass = "page";
 			<div id="slider" class="flexslider">
 				<?php foreach( $images as $image ): ?>
 					<div class="slide">
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						<p><?php echo $image['caption']; ?></p>
+						<picture>
+							<img class="full_width_image"
+								 src="<?php echo $image['sizes']['larger']; ?>"
+								 <?php echo tevkori_get_srcset_string( $image['ID'], 'huge' ); ?>
+								 alt="<?php echo $image['alt']; ?>" />
+						</picture>
 					</div>
 				<?php endforeach; ?>
 			</div><?php */
-			
+
 		} ?>
 	</div>
 
@@ -55,30 +60,47 @@ $bclass = "page";
 
 
 // Loop for Modules
-while ( have_rows('blocks') ) : the_row();
 
-	if( get_row_layout() == 'titling' ) :				// Titles
+	while ( have_rows('blocks') ) : the_row();
 
-		if(get_sub_field('bg-img')) { ?>
-			<div class="back_img_quote" style="background-image: url(img/home_cover_back.jpg)"> <?php
-		} ?>
-			<div class="wrap">
-				<div>
-					<p class="blue Decima"><?php the_sub_field('title'); ?></p>
-					<p class="Leitura medium_title"><?php the_sub_field('content'); ?></p>
-				</div>
-			</div><?php
-		if(get_sub_field('bg-img')) { ?>
-			</div> <?php
-		}
+		if( get_row_layout() == 'titling' ) :				// Titles
+
+			if(get_sub_field('bg-img')) {
+				$img = get_sub_field('bg-img');
+
+				$img_med = wp_get_attachment_image_src($img, 'medium');
+				$img_large = wp_get_attachment_image_src($img, 'large');
+				$img_larger = wp_get_attachment_image_src($img, 'larger');
+				$img_largest = wp_get_attachment_image_src($img, 'largest');
+				$img_huge = wp_get_attachment_image_src($img, 'full-size');
+
+				if($img){
+					echo '<style> #bg-'.$A.' {background-image: url(' . $img_med[0] . ');}';
+					if($img_med) { echo ' @media (min-width: 600px) { #bg-'.$A.' {background-image: url(' . $img_large[0] . ');} }'; }
+					if($img_large) { echo ' @media (min-width: 1024px) { #bg-'.$A.' {background-image: url(' . $img_larger[0] . ');} }'; }
+					if($img_larger) { echo ' @media (min-width: 1400px) { #bg-'.$A.' {background-image: url(' . $img_largest[0] . ');} }'; }
+					if($img_largest) { echo ' @media (min-width: 1800px) { #bg-'.$A.' {background-image: url(' . $img_huge[0] . ');} }'; }
+					echo '</style>';
+				}
+				echo '<div id="bg-'. $A++ .'" class="back_img_quote">';
+			} ?>
+				<div class="wrap">
+					<div>
+						<p class="blue Decima"><?php the_sub_field('title'); ?></p>
+						<p class="Leitura medium_title"><?php the_sub_field('content'); ?></p>
+					</div>
+				</div><?php
+			if(get_sub_field('bg-img')) {
+				echo '</div>';
+			}
 
 
-	// elseif( get_row_layout() == 'imagenes' ) :
-	// 	echo 'images block';
+		// elseif( get_row_layout() == 'imagenes' ) :
+		// 	echo 'images block';
 
 
-	endif;
-endwhile; ?>
+		endif;
+	endwhile; ?>
 
 
     <?php /* // three pics one caption ?>
