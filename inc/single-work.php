@@ -67,28 +67,51 @@ $A = 'A';
 
 
 			if (get_sub_field('choose') == 'one') :
-				echo 'one: images';
-
+				echo 'one: images'; /*
+				$images = get_sub_field('gallery');
+				if($images) : ?>
+					<div class="bl-party-one-no-captions"><?php
+						foreach( $images as $image ): ?>
+							<div>
+								<picture>
+									<img class="full_width_image"
+										 src="<?php echo $image['sizes']['larger']; ?>"
+										 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+										 alt="<?php echo $image['alt']; ?>" />
+								</picture>
+							</div><?php
+						endforeach;
+						if(get_sub_field('caption')){ ?>
+							<div class="caption decima"><?php the_sub_field('caption') ?></div><?php
+						} ?>
+					</div><?php
+				endif; */
 
 			elseif (get_sub_field('choose') == 'two') :
-				echo 'two: images'; ?>
-				<div class="bl-party-two-no-captions">
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<?php // Caption ?>
-				</div><?php
+				// echo 'two: images';
+				$images = get_sub_field('gallery');
+				if($images) : ?>
+					<div class="bl-party-two-no-captions"><?php
+						foreach( $images as $image ): ?>
+							<div>
+								<picture>
+									<img class="full_width_image"
+										 src="<?php echo $image['sizes']['larger']; ?>"
+										 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+										 alt="<?php echo $image['alt']; ?>" />
+								</picture>
+							</div><?php
+						endforeach;
+						if(get_sub_field('caption')){ ?>
+							<div class="caption decima"><?php the_sub_field('caption') ?></div><?php
+						} ?>
+					</div><?php
+				endif;
 
 
 			elseif (get_sub_field('choose') == 'one-half') :
-				echo 'one-half: images'; ?>
-				<div class="bl-party-three-one-caption">
-					<div><img src="http://lorempixel.com/640/750/technics"></div>
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<div>
-						<p>Centro de Cáncer ABC. Photos by: Blake Marvin, HKS Inc.</p>
-					</div>
-				</div><?php
+				// echo 'one-half: images';
+
 
 
 			elseif (get_sub_field('choose') == 'thirds') :
