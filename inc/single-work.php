@@ -63,7 +63,96 @@ $A = 'A';
 
 	while ( have_rows('blocks') ) : the_row();
 
-		if( get_row_layout() == 'titling' ) :				// Titles
+		if( get_row_layout() == 'imagenes' ) :				// Imagenes
+
+
+			if (get_sub_field('choose') == 'one') :
+				echo 'one: images';
+
+
+			elseif (get_sub_field('choose') == 'two') :
+				echo 'two: images'; ?>
+				<div class="bl-party-two-no-captions">
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<?php // Caption ?>
+				</div><?php
+
+
+			elseif (get_sub_field('choose') == 'one-half') :
+				echo 'one-half: images'; ?>
+				<div class="bl-party-three-one-caption">
+					<div><img src="http://lorempixel.com/640/750/technics"></div>
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<div>
+						<p>Centro de Cáncer ABC. Photos by: Blake Marvin, HKS Inc.</p>
+					</div>
+				</div><?php
+
+
+			elseif (get_sub_field('choose') == 'thirds') :
+				echo 'thirds: images'; ?>
+				<div class="bl-party-three-no-captions">
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<?php // Caption ?>
+				</div><?php
+
+
+			elseif (get_sub_field('choose') == 'thirds-cap') :
+				echo 'thirds-cap: images'; ?>
+				<div class="wrap bl-party-three-w-captions">
+					<ul>
+						<li>
+							<img src="http://lorempixel.com/380/300/technics">
+							<p class="small_paragraph Decima">1886 - Hospital Americano</p>
+						</li>
+						<li>
+							<img src="http://lorempixel.com/380/300/technics">
+							<p class="small_paragraph Decima">1923 - Hospital Inglés</p>
+						</li>
+						<li>
+							<img src="http://lorempixel.com/380/300/technics">
+							<p class="small_paragraph Decima">1941 - Centro Médico ABC American British Cowdray</p>
+						</li>
+					<ul>
+				</div><?php
+
+
+			elseif (get_sub_field('choose') == 'slider') :
+				echo 'slider: images';
+
+
+			elseif (get_sub_field('choose') == 'mayhem') :
+				echo 'mayhem: images'; ?>
+				<div class="wrap bl-party-random-grid section_pad">
+					<div class="rand-grid-a left">
+						<div class="rand-grid-a-top">
+							<img class="rand-grid-img-1" src="http://lorempixel.com/480/355/technics">
+						</div>
+						<div class="rand-grid-a-bottom">
+							<div>
+								<img class="rand-grid-img-2" src="http://lorempixel.com/380/240/technics">
+								<img class="rand-grid-img-3" src="http://lorempixel.com/280/260/technics">
+							</div>
+							<div>
+								<img class="rand-grid-img-4" src="http://lorempixel.com/380/770/technics">
+							</div>
+						</div>
+					</div>
+					<div class="rand-grid-c right">
+						<img class="rand-grid-img-5" src="http://lorempixel.com/280/260/technics">
+						<img class="rand-grid-img-6" src="http://lorempixel.com/380/240/technics">
+						<img class="rand-grid-img-7" src="http://lorempixel.com/280/260/technics">
+						<img class="rand-grid-img-8" src="http://lorempixel.com/380/240/technics">
+					</div>
+				</div><?php
+
+
+			endif;
+		elseif( get_row_layout() == 'titling' ) :				// Titles
 
 			if(get_sub_field('bg-img')) {
 				$img = get_sub_field('bg-img');
@@ -100,89 +189,12 @@ $A = 'A';
 			}
 
 
-		// elseif( get_row_layout() == 'imagenes' ) :
-		// 	echo 'images block';
-
-
 		endif;
 	endwhile; ?>
 
 
-    <?php /* // three pics one caption ?>
-    <div class="bl-party-three-one-caption">
-        <div><img src="http://lorempixel.com/640/750/technics"></div>
-        <div><img src="http://lorempixel.com/640/374/technics"></div>
-        <div><img src="http://lorempixel.com/640/374/technics"></div>
-        <div>
-            <p>Centro de Cáncer ABC. Photos by: Blake Marvin, HKS Inc.</p>
-        </div>
-    </div>
+    <?php /*
 
-
-
-
-
-    <?php // three images with caption ?>
-    <div class="wrap bl-party-three-w-captions">
-        <ul>
-            <li>
-                <img src="http://lorempixel.com/380/300/technics">
-                <p class="small_paragraph Decima">1886 - Hospital Americano</p>
-            </li>
-            <li>
-                <img src="http://lorempixel.com/380/300/technics">
-                <p class="small_paragraph Decima">1923 - Hospital Inglés</p>
-            </li>
-            <li>
-                <img src="http://lorempixel.com/380/300/technics">
-                <p class="small_paragraph Decima">1941 - Centro Médico ABC American British Cowdray</p>
-            </li>
-        <ul>
-    </div>
-
-
-
-
-
-    <?php // two pics no caption ?>
-    <div class="bl-party-two-no-captions">
-        <div><img src="http://lorempixel.com/640/374/technics"></div>
-        <div><img src="http://lorempixel.com/640/374/technics"></div>
-    </div>
-
-
-
-
-    <?php // three pics no caption ?>
-    <div class="bl-party-three-no-captions">
-        <div><img src="http://lorempixel.com/640/374/technics"></div>
-        <div><img src="http://lorempixel.com/640/374/technics"></div>
-        <div><img src="http://lorempixel.com/640/374/technics"></div>
-    </div>
-
-    <?php // random grid ?>
-    <div class="wrap bl-party-random-grid section_pad">
-        <div class="rand-grid-a left">
-            <div class="rand-grid-a-top">
-                <img class="rand-grid-img-1" src="http://lorempixel.com/480/355/technics">
-            </div>
-            <div class="rand-grid-a-bottom">
-                <div>
-                    <img class="rand-grid-img-2" src="http://lorempixel.com/380/240/technics">
-                    <img class="rand-grid-img-3" src="http://lorempixel.com/280/260/technics">
-                </div>
-                <div>
-                    <img class="rand-grid-img-4" src="http://lorempixel.com/380/770/technics">
-                </div>
-            </div>
-        </div>
-        <div class="rand-grid-c right">
-            <img class="rand-grid-img-5" src="http://lorempixel.com/280/260/technics">
-            <img class="rand-grid-img-6" src="http://lorempixel.com/380/240/technics">
-            <img class="rand-grid-img-7" src="http://lorempixel.com/280/260/technics">
-            <img class="rand-grid-img-8" src="http://lorempixel.com/380/240/technics">
-        </div>
-    </div>
 
 
 
