@@ -110,8 +110,34 @@ $A = 'A';
 
 
 			elseif (get_sub_field('choose') == 'one-half') :
-				// echo 'one-half: images';
 
+				$images = get_sub_field('gallery');
+				if($images) : ?>
+					<div class="bl-party-three-one-caption"><?php
+						foreach( $images as $image ): ?>
+							<div>
+								<picture>
+									<img class="full_width_image"
+										 src="<?php echo $image['sizes']['larger']; ?>"
+										 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+										 alt="<?php echo $image['alt']; ?>" />
+								</picture>
+							</div><?php
+						endforeach;
+						if(get_sub_field('caption')){ ?>
+							<div class="caption decima"><?php the_sub_field('caption') ?></div><?php
+						} ?>
+					</div><?php
+				endif;
+				/*
+				<div class="bl-party-three-one-caption">
+					<div><img src="http://lorempixel.com/640/750/technics"></div>
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<div><img src="http://lorempixel.com/640/374/technics"></div>
+					<div>
+						<p>Centro de Cáncer ABC. Photos by: Blake Marvin, HKS Inc.</p>
+					</div>
+				</div><?php */
 
 
 			elseif (get_sub_field('choose') == 'thirds') :
