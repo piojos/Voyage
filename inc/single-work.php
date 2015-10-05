@@ -67,7 +67,7 @@ $A = 'A';
 
 
 			if (get_sub_field('choose') == 'one') :
-				echo 'one: images'; /*
+				echo 'one: images';
 				$images = get_sub_field('gallery');
 				if($images) : ?>
 					<div class="bl-party-one-no-captions"><?php
@@ -85,7 +85,7 @@ $A = 'A';
 							<div class="caption decima"><?php the_sub_field('caption') ?></div><?php
 						} ?>
 					</div><?php
-				endif; */
+				endif;
 
 			elseif (get_sub_field('choose') == 'two') :
 				// echo 'two: images';
@@ -129,15 +129,6 @@ $A = 'A';
 						} ?>
 					</div><?php
 				endif;
-				/*
-				<div class="bl-party-three-one-caption">
-					<div><img src="http://lorempixel.com/640/750/technics"></div>
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<div>
-						<p>Centro de Cáncer ABC. Photos by: Blake Marvin, HKS Inc.</p>
-					</div>
-				</div><?php */
 
 
 			elseif (get_sub_field('choose') == 'thirds') :
