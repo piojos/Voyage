@@ -63,7 +63,8 @@ $A = 'A';
 
 	while ( have_rows('blocks') ) : the_row();
 
-		if( get_row_layout() == 'imagenes' ) :				// Imagenes
+// Imagenes
+		if( get_row_layout() == 'imagenes' ) :
 
 
 			if (get_sub_field('choose') == 'one') :
@@ -95,7 +96,7 @@ $A = 'A';
 						foreach( $images as $image ): ?>
 							<div>
 								<picture>
-									<img class="full_width_image"
+									<img
 										 src="<?php echo $image['sizes']['larger']; ?>"
 										 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
 										 alt="<?php echo $image['alt']; ?>" />
@@ -110,15 +111,14 @@ $A = 'A';
 
 
 			elseif (get_sub_field('choose') == 'one-half') :
-
+				// echo 'one-half: 1 vertical image, 2 Images half the height';
 				$images = get_sub_field('gallery');
 				if($images) : ?>
 					<div class="bl-party-three-one-caption"><?php
 						foreach( $images as $image ): ?>
 							<div>
 								<picture>
-									<img class="full_width_image"
-										 src="<?php echo $image['sizes']['larger']; ?>"
+									<img src="<?php echo $image['sizes']['larger']; ?>"
 										 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
 										 alt="<?php echo $image['alt']; ?>" />
 								</picture>
@@ -132,37 +132,50 @@ $A = 'A';
 
 
 			elseif (get_sub_field('choose') == 'thirds') :
-				echo 'thirds: images'; ?>
-				<div class="bl-party-three-no-captions">
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<div><img src="http://lorempixel.com/640/374/technics"></div>
-					<?php // Caption ?>
-				</div><?php
+				// echo 'thirds: 3 images, no cap';
+				$images = get_sub_field('gallery');
+				if($images) : ?>
+					<div class="bl-party-three-no-captions"><?php
+						foreach( $images as $image ): ?>
+							<div>
+								<picture>
+									<img src="<?php echo $image['sizes']['larger']; ?>"
+										 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+										 alt="<?php echo $image['alt']; ?>" />
+								</picture>
+							</div><?php
+						endforeach;
+						if(get_sub_field('caption')){ ?>
+							<div class="caption decima"><?php the_sub_field('caption') ?></div><?php
+						} ?>
+					</div><?php
+				endif;
 
 
 			elseif (get_sub_field('choose') == 'thirds-cap') :
-				echo 'thirds-cap: images'; ?>
-				<div class="wrap bl-party-three-w-captions">
-					<ul>
-						<li>
-							<img src="http://lorempixel.com/380/300/technics">
-							<p class="small_paragraph Decima">1886 - Hospital Americano</p>
-						</li>
-						<li>
-							<img src="http://lorempixel.com/380/300/technics">
-							<p class="small_paragraph Decima">1923 - Hospital Inglés</p>
-						</li>
-						<li>
-							<img src="http://lorempixel.com/380/300/technics">
-							<p class="small_paragraph Decima">1941 - Centro Médico ABC American British Cowdray</p>
-						</li>
-					<ul>
-				</div><?php
-
+				// echo 'thirds-cap: images';
+				$images = get_sub_field('gallery');
+				if($images) : ?>
+					<div class="wrap bl-party-three-w-captions">
+						<ul><?php
+							foreach( $images as $image ): ?>
+								<li>
+									<picture>
+										<img src="<?php echo $image['sizes']['larger']; ?>"
+											 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+											 alt="<?php echo $image['alt']; ?>" />
+									</picture><?php
+									if($image['caption']){
+										echo '<p class="small_paragraph Decima">'. $image['caption'] .'</p>';
+									} ?>
+								</li><?php
+							endforeach;	?>
+						<ul>
+					</div><?php
+				endif;
 
 			elseif (get_sub_field('choose') == 'slider') :
-				echo 'slider: images';
+				echo 'slider: images<br> @Linda, onstáh esto?';
 
 
 			elseif (get_sub_field('choose') == 'mayhem') :
@@ -192,7 +205,12 @@ $A = 'A';
 
 
 			endif;
-		elseif( get_row_layout() == 'titling' ) :				// Titles
+
+
+
+
+// Titles
+		elseif( get_row_layout() == 'titling' ) :
 
 			if(get_sub_field('bg-img')) {
 				$img = get_sub_field('bg-img');
