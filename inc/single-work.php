@@ -179,29 +179,95 @@ $A = 'A';
 
 
 			elseif (get_sub_field('choose') == 'mayhem') :
-				echo 'mayhem: images'; ?>
-				<div class="wrap bl-party-random-grid section_pad">
-					<div class="rand-grid-a left">
-						<div class="rand-grid-a-top">
-							<img class="rand-grid-img-1" src="http://lorempixel.com/480/355/technics">
-						</div>
-						<div class="rand-grid-a-bottom">
-							<div>
-								<img class="rand-grid-img-2" src="http://lorempixel.com/380/240/technics">
-								<img class="rand-grid-img-3" src="http://lorempixel.com/280/260/technics">
-							</div>
-							<div>
-								<img class="rand-grid-img-4" src="http://lorempixel.com/380/770/technics">
-							</div>
-						</div>
-					</div>
-					<div class="rand-grid-c right">
-						<img class="rand-grid-img-5" src="http://lorempixel.com/280/260/technics">
-						<img class="rand-grid-img-6" src="http://lorempixel.com/380/240/technics">
-						<img class="rand-grid-img-7" src="http://lorempixel.com/280/260/technics">
-						<img class="rand-grid-img-8" src="http://lorempixel.com/380/240/technics">
-					</div>
-				</div><?php
+				echo 'mayhem: images';
+/*
+				$images = get_sub_field('gallery');
+				if($images) : ?>
+					<div class="wrap bl-party-random-grid section_pad">
+						<?php
+							$mhmNo = 1;
+							foreach( $images as $image ): ?>
+								<?php
+									if($mhmNo == 1) { ?>
+									<div class="rand-grid-a left">
+										<div class="rand-grid-a-top">
+											<picture>
+												<img class="rand-grid-img-<?php echo $nhmNo; ?>"
+													 src="<?php echo $image['sizes']['larger']; ?>"
+													 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+													 alt="<?php echo $image['alt']; ?>" />
+											</picture>
+										</div><?php
+
+
+									} elseif ($mhmNo == 2) { ?>
+										<div class="rand-grid-a-bottom">
+											<div>
+												<picture>
+													<img class="rand-grid-img-<?php echo $nhmNo; ?>"
+														 src="<?php echo $image['sizes']['larger']; ?>"
+														 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+														 alt="<?php echo $image['alt']; ?>" />
+												</picture><?php
+
+
+									} elseif ($mhmNo == 3) { ?>
+												<picture>
+													<img class="rand-grid-img-<?php echo $nhmNo; ?>"
+														 src="<?php echo $image['sizes']['larger']; ?>"
+														 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+														 alt="<?php echo $image['alt']; ?>" />
+												</picture>
+											</div><?php
+
+
+									} elseif ($mhmNo == 4) {  ?>
+											<div>
+												<picture>
+													<img class="rand-grid-img-<?php echo $nhmNo; ?>"
+														 src="<?php echo $image['sizes']['larger']; ?>"
+														 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+														 alt="<?php echo $image['alt']; ?>" />
+												</picture>
+											</div>
+										</div>
+									</div><?php
+
+
+									} elseif ($mhmNo == 5) {  ?>
+									<div class="rand-grid-c right">
+										<picture>
+											<img class="rand-grid-img-<?php echo $nhmNo; ?>"
+												 src="<?php echo $image['sizes']['larger']; ?>"
+												 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+												 alt="<?php echo $image['alt']; ?>" />
+										</picture><?php
+
+
+									} elseif ($mhmNo <= 6) { ?>
+										<picture>
+											<img class="rand-grid-img-<?php echo $nhmNo; ?>"
+												 src="<?php echo $image['sizes']['larger']; ?>"
+												 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+												 alt="<?php echo $image['alt']; ?>" />
+										</picture>
+									</div><?php
+
+
+									} elseif ($mhmNo == 8) { ?>
+										<picture>
+											<img class="rand-grid-img-<?php echo $nhmNo; ?>"
+												 src="<?php echo $image['sizes']['larger']; ?>"
+												 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
+												 alt="<?php echo $image['alt']; ?>" />
+										</picture>
+									</div><?php
+									}
+									$mhmNo++;
+
+							endforeach;	?>
+					</div><?php
+				endif; */
 
 
 			endif;
