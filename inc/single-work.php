@@ -7,9 +7,8 @@ Missing:
 - Slider template (Linda)
 */
 
-$bclass = "page";
-$A = 'A';
-?>
+	$bclass = "page";
+	$A = 'A'; ?>
 
     <?php /* LINDA: añadir funcionalidad de slider más adelante */ ?>
 	<div class="section_bottom_margins"><?php
@@ -179,8 +178,6 @@ $A = 'A';
 
 
 			elseif (get_sub_field('choose') == 'mayhem') :
-				echo 'mayhem: images';
-/*
 				$images = get_sub_field('gallery');
 				if($images) : ?>
 					<div class="wrap bl-party-random-grid section_pad">
@@ -250,8 +247,7 @@ $A = 'A';
 												 src="<?php echo $image['sizes']['larger']; ?>"
 												 <?php echo tevkori_get_srcset_string( $image['ID'], 'largest' ); ?>
 												 alt="<?php echo $image['alt']; ?>" />
-										</picture>
-									</div><?php
+										</picture><?php
 
 
 									} elseif ($mhmNo == 8) { ?>
@@ -267,7 +263,7 @@ $A = 'A';
 
 							endforeach;	?>
 					</div><?php
-				endif; */
+				endif;
 
 
 			endif;
@@ -314,34 +310,28 @@ $A = 'A';
 
 
 		endif;
-	endwhile; ?>
-
-
-    <?php /*
+	endwhile;
 
 
 
-
-
-<?php get_template_part('inc/contact_share'); ?>
-
-<?php // more projects ?>
-<section class="gray_light_bg">
-    <div class="wrap bl-party-three-w-captions">
-        <h2 class="Decima">Explore More Projects</h2>
-        <ul>
-            <li>
-                <img src="http://lorempixel.com/380/380/technics">
-                <p>Penguin Books. <span class="Leitura">An Expanding Universe Keynote.</span></p>
-            </li>
-            <li>
-                <img src="http://lorempixel.com/380/380/technics">
-                <p>Comunidad VIVEX. <span class="Leitura">Re-defining the News in Mexico.</span></p>
-            </li>
-            <li>
-                <img src="http://lorempixel.com/380/380/technics">
-                <p>Knock your Wear. <span class="Leitura">Professional Image Consulting.</span></p>
-            </li>
-        <ul>
-    </div>
-</section> */ ?>
+	get_template_part('inc/contact_share');
+	// more projects ?>
+	<section class="gray_light_bg">
+	    <div class="wrap bl-party-three-w-captions">
+	        <h2 class="Decima">Explore More Projects</h2>
+	        <ul>
+	            <li>
+	                <img src="http://lorempixel.com/380/380/technics">
+	                <p>Penguin Books. <span class="Leitura">An Expanding Universe Keynote.</span></p>
+	            </li>
+	            <li>
+	                <img src="http://lorempixel.com/380/380/technics">
+	                <p>Comunidad VIVEX. <span class="Leitura">Re-defining the News in Mexico.</span></p>
+	            </li>
+	            <li>
+	                <img src="http://lorempixel.com/380/380/technics">
+	                <p>Knock your Wear. <span class="Leitura">Professional Image Consulting.</span></p>
+	            </li>
+	        <ul>
+	    </div>
+	</section>
