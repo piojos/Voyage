@@ -1,8 +1,9 @@
 <?php
 
+$bgClr = get_sub_field('bg-color');
+
 if(get_sub_field('bg-img')) {
 	$img = get_sub_field('bg-img');
-	$bgClr = get_sub_field('bg-color');
 
 	$img_med = wp_get_attachment_image_src($img, 'medium');
 	$img_large = wp_get_attachment_image_src($img, 'large');
@@ -23,13 +24,23 @@ if(get_sub_field('bg-img')) {
 		echo '</style>';
 	}
 	echo '<div id="bg-'. $A++ .'" class="back_img_quote">';
+} else {
+	echo '<div style="background-color:'.$bgClr.';" class="back_img_quote">';
 } ?>
-<div class="wrap">
-	<div>
-		<div class="blue Decima"><?php the_sub_field('title'); ?></div>
-		<div class="Leitura medium_title"><?php the_sub_field('content'); ?></div>
-	</div>
-</div><?php
-// if(get_sub_field('bg-img')) {
-// 	echo '</div>';
-// } ?>
+
+	<div class="wrap">
+		<div><?php
+			if(get_sub_field('title')) {
+				echo '<div class="blue Decima">'.get_sub_field('title').'</div>';
+			}
+			if(get_sub_field('content')) {
+				echo '<div class="Leitura medium_title">'.get_sub_field('content').'</div>';
+			} ?>
+		</div>
+	</div><?php
+
+if(get_sub_field('bg-img')) {
+	echo '</div>';
+} elseif($bgClr) {
+	echo '</div>';
+} ?>

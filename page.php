@@ -13,7 +13,6 @@ global $post;
 $post_slug=$post->post_name; ?>
 
 
-
 <section id="<?php echo $post_slug; ?>"><?php
 
 while ( have_rows('blocks') ) : the_row();

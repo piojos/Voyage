@@ -21,3 +21,11 @@
 .bl-party-random-grid img {
 	width: 100%;
 }
+.medium_title p {
+	margin-bottom: 0;
+}
+hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid #cacaca;
+}
