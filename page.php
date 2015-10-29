@@ -10,7 +10,8 @@ $bclass = "page";
 get_header();
 
 global $post;
-$post_slug=$post->post_name; ?>
+$post_slug=$post->post_name;
+$titBgID = A; ?>
 
 
 <section id="<?php echo $post_slug; ?>"><?php
