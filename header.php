@@ -18,12 +18,13 @@ global $bclass;
 	<title><?php wp_title(); ?></title>
 
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/responsivemenu.css">
+<?php //	<link rel="stylesheet" href="<? php bloginfo('template_url'); ? >/css/responsivemenu.css"> ?>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/shame.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/leitura/MyFontsWebfontsKit.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/decima/MyFontsWebfontsKit.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/responsiveslides.min.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/masonry.pkgd.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/imagesloaded.pkgd.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
@@ -41,18 +42,8 @@ global $bclass;
 			<ul id="nav" class="Decima">
 				<li><a href="index.php">Home</a></li>
 				<li><a href="about.php">About</a></li>
-				<li><a href="work.php">Work</a></li>
+				<li><a href="/work">Work</a></li>
 				<li><a href="services.php">Services</a></li>
-				<!-- <li><a href="recent.php">Recent</a></li> -->
-				<!-- <li><a href="contact.php">Contact</a></li> -->
-			</ul>
-			<ul id="dev_nav">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="work.php">Work</a></li>
-				<li><a href="work-single.php">S-Project</a></li>
-				<li><a href="services.php">Services</a></li>
-				<li><a href="services.php">S-Blog</a></li>
 			</ul>
 
 		</div>
