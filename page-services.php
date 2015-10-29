@@ -70,7 +70,7 @@ include "templates/header.php";
         <h2 class="red Decima">2. Brand Development</h2>
 		<div class="basic_grid two_col_grid">
 			<div>
-				<p class="Leitura medium_title">We deliver clear and actionable direction for how a Brand should behave in digital and traditional forms.</p>
+				<p>We deliver clear and actionable direction for how a Brand should behave in digital and traditional forms.</p>
 			</div>
 			<div>
 				<h4 class="Decima">Brand Dev main services:</h4>

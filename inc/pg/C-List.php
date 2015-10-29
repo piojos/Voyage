@@ -1,11 +1,14 @@
 <?php
+
 $n = 1;
 while(have_rows('element')) : the_row(); ?>
 	<div class="border_section">
-		<div class="wrap">
-			<h2 class="red Decima"><?php
-			echo $n++;
-			the_sub_field('title'); ?></h2>
+		<div class="wrap"><?php
+
+			if(get_sub_field('title')){
+				echo '<h2 class="red Decima">'.$n++.'. '. get_sub_field('title').'</h2>';
+			} ?>
+
 			<div class="basic_grid two_col_grid">
 				<div>
 					<div class="Leitura medium_title"><?php the_sub_field('content'); ?></div>
@@ -15,6 +18,8 @@ while(have_rows('element')) : the_row(); ?>
 					<div class="small_title Decima bullet_list"><?php the_sub_field('service-content'); ?></div>
 				</div>
 			</div><?php
+
+
 			$images = get_sub_field('images');
 			if($images): ?>
 				<div class="bl-party-two-w-captions">
@@ -39,6 +44,7 @@ while(have_rows('element')) : the_row(); ?>
 					<ul>
 				</div><?php
 			endif; ?>
+
 		</div>
 	</div><?php
 endwhile; ?>

@@ -1,12 +1,9 @@
 <?php
-
 /*
 Home Template
 Neue Raidho Website
 */
-
 include "templates/header.php";
-
 ?>
 
 <section id="about">
@@ -35,24 +32,14 @@ include "templates/header.php";
 		</div>
 	</div>
 
-	<section>
+	<div class="gray_light_bg section_pad"> <!-- Process Slider -->
 		<div class="wrap">
-			<h2>What we stand for</h2>
-			<div class="raidho_slider">
-				<div class="raidho_slider_slide">
-					<div style="background-image: url('http://lorempixel.com/600/600/technics')">
-					</div>
-					<div>
-						<h2>Simplicity: Good Design always KISS</h2>
-						<p>
-						While Tools & Technology continue to advance, simplicity and clarity remain fundamental in our practice. We use Design as a means to define experiences that shape our present and our future.<br>
-						<span class="gray_light">← DAT-1 Chair, by Charles Eames.</span>
-						</p>
-					</div>
-				</div>
+			<div>
+				<h3 class="Decima">What we stand for</h3>
+				<p class="Leitura medium_title">About Slider goes Here.</p>
 			</div>
-		</div>
-	</section>
+		</div> <!-- Wrap -->
+	</div>
 
 	<div class="wrap">
 		<h2>People at Raidho</h2>

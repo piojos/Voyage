@@ -11,6 +11,8 @@ if(get_sub_field('bg-img')) {
 	$img_largest = wp_get_attachment_image_src($img, 'largest');
 	$img_huge = wp_get_attachment_image_src($img, 'full-size');
 
+	echo '<div id="bg-'. $A++ .'" class="back_img_quote"><div class="wrap">';
+
 	if($img){
 		echo '<style> #bg-'.$A.' {background-image: url(' . $img_med[0] . ');';
 		if($bgClr) {
@@ -23,24 +25,23 @@ if(get_sub_field('bg-img')) {
 		if($img_largest) { echo ' @media (min-width: 1800px) { #bg-'.$A.' {background-image: url(' . $img_huge[0] . ');} }'; }
 		echo '</style>';
 	}
-	echo '<div id="bg-'. $A++ .'" class="back_img_quote">';
+} elseif($bgClr) {
+	echo '<div style="background-color:'.$bgClr.';" class="back_img_quote"><div class="wrap">';
 } else {
-	echo '<div style="background-color:'.$bgClr.';" class="back_img_quote">';
+	echo '<div class="wrap"><div class="section_pad">';
 } ?>
 
-	<div class="wrap">
-		<div><?php
-			if(get_sub_field('title')) {
-				echo '<div class="blue Decima">'.get_sub_field('title').'</div>';
-			}
-			if(get_sub_field('content')) {
-				echo '<div class="Leitura medium_title">'.get_sub_field('content').'</div>';
-			} ?>
-		</div>
+	<div><?php
+		if(get_sub_field('title')) {
+			echo '<div class="blue Decima">'.get_sub_field('title').'</div>';
+		}
+		if(get_sub_field('content')) {
+			echo '<div class="Leitura medium_title">'.get_sub_field('content').'</div>';
+		} ?>
 	</div><?php
 
-if(get_sub_field('bg-img')) {
-	echo '</div>';
-} elseif($bgClr) {
+if(get_sub_field('bg-img') or $bgClr) {
+	echo '</div></div>';
+} else {
 	echo '</div>';
 } ?>
