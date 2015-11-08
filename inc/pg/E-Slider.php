@@ -27,8 +27,25 @@
 			$eleN = 1;
 			while (have_rows('tabs')) {
 				the_row(); ?>
-				<li>
-					<div class="image" style="background-image: url(img/feat_banner_back_a.jpg)"></div>
+				<li><?php
+
+				global $titBgID;
+				$img = get_sub_field('img');
+
+				if($img){
+					$img_large = wp_get_attachment_image_src($img, 'large');
+					$img_larger = wp_get_attachment_image_src($img, 'larger');
+					$img_largest = wp_get_attachment_image_src($img, 'largest');
+
+					echo '<style> #slbg-'.$titBgID.' {background-image: url(' . $img_large[0] . ');}';
+					if($img_large) { echo ' @media (min-width: 1024px) { #slbg-'.$titBgID.' {background-image: url(' . $img_larger[0] . ');} }'; }
+					if($img_larger) { echo ' @media (min-width: 1400px) { #slbg-'.$titBgID.' {background-image: url(' . $img_largest[0] . ');} }'; }
+					echo '</style>';
+
+					echo '<div class="image" id="slbg-'.$titBgID++.'"></div>';
+				}  ?>
+
+
 					<div class="txt white_bg">
 						<div>
 							<h2><span class="red"><?php the_sub_field('title'); ?>:</span> <?php the_sub_field('heading'); ?></h2>
