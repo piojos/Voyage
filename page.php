@@ -72,21 +72,20 @@ while ( have_rows('blocks') ) : the_row();
 	endif;
 endwhile; ?>
 
-</section>
+</section><?php
 
-<?php /* get_template_part('templates/extended_nav'); ?>
+	get_template_part('inc/extended_nav');
 
-	<section class="feat_project">
-		<div class="wrap">
-			<div class="feat_project_info">
-				<h2><span class="white">Featured Project:</span> Brand Redesign for Major Hospital ABC.</h2>
-				<p class="Decima">After more than 25 years without a major brand redesign, we had the opportunity to completely revamp the brand and visual identity for this 120 years old hospital.</p>
-				<p class="Decima white"><a href="#">Read the full story →</a></p>
-			</div>
-		</div>
-		<div class="transp_back_image" style="background-image: url(img/featured_single.jpg)"></div>
-	</section>
+	$post = get_field('ftd-project', 'options');
+	$random = array_rand($post, 1);
 
-<?php */
+	// The Query
+	$the_query = new WP_Query( array( 'post_type' => 'work', 'p' => $post[$random], 'posts_per_page' => 1 ) );
+
+	while ( $the_query->have_posts() ) {
+		$the_query->the_post();
+		get_template_part('inc/feat_project');
+	}
+	wp_reset_postdata();
 
 get_footer(); ?>

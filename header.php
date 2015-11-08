@@ -5,8 +5,6 @@ Header Template
 Neue Raidho Website
 */
 
-global $bclass;
-
 ?>
 <html>
 <head>
@@ -17,8 +15,12 @@ global $bclass;
 
 	<title><?php wp_title(); ?></title>
 
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsivemenu.css">
+	<link rel="stylesheet" type="text/css" href="fonts/leitura/MyFontsWebfontsKit.css">
+	<link rel="stylesheet" type="text/css" href="fonts/decima/MyFontsWebfontsKit.css">
+
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
-<?php //	<link rel="stylesheet" href="<? php bloginfo('template_url'); ? >/css/responsivemenu.css"> ?>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/shame.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/leitura/MyFontsWebfontsKit.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/decima/MyFontsWebfontsKit.css">
@@ -32,20 +34,34 @@ global $bclass;
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class($bclass); ?> >
+<body <?php body_class(); ?> >
 
 	<header>
 
 		<div class="wrap">
-			<h3 id="nav_logo">RAIDHO</h3>
+			<h3 id="nav_logo"><span><img src="img/simbolo_raidho.svg"></span> RAIDHO</h3>
 
-			<ul id="nav" class="Decima">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="/work">Work</a></li>
-				<li><a href="services.php">Services</a></li>
-			</ul>
+			<a id="mobile_nav_toggl" class="Decima" href="#">&#9776;</a>
+			<script>
+				$(document).ready(function() {
+					$('#mobile_nav_toggl').click(function(e) {
+						$(this).toggleClass('active');
+						$('#nav').toggleClass('active');
+						e.preventDefault();
+					});
+				});
+			</script><?php
+
+			$post_object = get_field('menu', 'options');
+			if($post_object) : ?>
+			<ul id="nav" class="Decima"><?php
+				foreach($post_object as $post) :
+					setup_postdata($post);
+					echo '<li><a href="'.get_the_permalink().'">'.get_the_title().'</a></li>';
+				endforeach;
+				wp_reset_postdata(); ?>
+			</ul><?php
+			endif; ?>
 
 		</div>
-	<?php wp_head(); ?>
 	</header>
