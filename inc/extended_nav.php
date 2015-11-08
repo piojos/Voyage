@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /*
 Extended Nav Template
@@ -6,45 +6,74 @@ Neue Raidho Website
 */
 
 ?>
-	<div id="extended_nav">
+	<div id="extended_nav"><?php
 
-		<div class="wrap">
-			<div class="e_nav1 gray_light_bg">
-				<a class="nav1_bttn" href="#">
-					<div style="background-image: url('img/e_nav1_img.jpg')">
-					</div>
-					<div>
-						<h4 class="red">More recent activity</h4>
-						<p class="Decima">Go and check out our Recent Activity to catch up with our latest news and projects <span class="red">→</span></p>
-					</div>
-				</a>
-			</div>
-		</div>
+	// 1 if Default > Get from options
+	if(get_field('lower-choose') == 'default') :
+
+		if(get_field('more-choser') == 'log') :
+			while (have_rows('more-log', 'options')) {
+				the_row();
+				get_template_part('inc/pg/exNav_module');
+			}
+		elseif(get_field('more-choser') == 'blog') :
+			while (have_rows('more-blog', 'options')) {
+				the_row();
+				get_template_part('inc/pg/exNav_module');
+			}
+		elseif(get_field('more-choser') == 'work') :
+			while (have_rows('more-work', 'options')) {
+				the_row();
+				get_template_part('inc/pg/exNav_module');
+			}
+		endif;
+
+
+	// 2 if Custom > get from Repeater
+	elseif(get_field('lower-choose') == 'custom') :
+		while(have_rows('more-custom')) {
+			the_row();
+			get_template_part('inc/pg/exNav_module');
+		}
+
+
+	// 3 else (none)
+	else :
+		// echo 'none';
+	endif; ?>
+
 
 		<div class="e_nav_bottom gray_light_bg">
-			<div class="wrap">
-				<div class="e_nav2">
-					<a class="nav2_bttn" href="#">
-						<div style="background-image: url('img/e_nav2_img.jpg')">
+			<div class="wrap"><?php
+			$n = 2;
+			while(have_rows('shortcuts')) :
+				the_row();
+				$orExcerpt = get_sub_field('or-excerpt');
+				$post = get_sub_field('link');
+				setup_postdata($post);
+
+				$img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium'); ?>
+
+				<div class="e_nav<?php echo $n++; ?>">
+					<a class="nav2_bttn" href="<?php the_permalink(); ?>">
+						<div style="background-image: url(<?php echo $img[0]; ?>)">
 						</div>
 						<div>
-							<h4>About</h4>
-							<p class="Decima">Get to know our studio, what do we stand for, and our team.<br>
-							<span class="red">Continue to About section →</span></p>
+							<h4><?php the_title(); ?></h4>
+							<div class="Decima"><?php
+							if($orExcerpt){
+								echo $orExcerpt;
+							} else {
+								the_field('excerpt');
+							} ?><br>
+							<span class="red">Continue to <?php the_title(); ?> →</span></div>
 						</div>
 					</a>
-				</div>
-				<div class="e_nav3">
-					<a class="nav2_bttn" href="#">
-						<div style="background-image: url('img/e_nav3_img.jpg')">
-						</div>
-						<div>
-							<h4>Services</h4>
-							<p class="Decima">Find out how we make great brands and digital products.<br>
-							<span class="red">Continue to our Services →</span></p>
-						</div>
-					</a>
-				</div>
+				</div><?php
+
+
+				wp_reset_postdata();
+			endwhile; ?>
 			</div>
 		</div>
 
