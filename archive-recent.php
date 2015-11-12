@@ -38,4 +38,6 @@
 <?php
 
 	get_template_part('inc/extended_nav');
+	$shtct = get_field('shortcuts');
+	print_r($shtct);
 	get_footer(); ?>
