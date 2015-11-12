@@ -51,7 +51,7 @@ get_header();
 							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'med-sq' ); ?>
 								<img src="<?php echo $image[0]; ?>" width="380" /><?php
 							endif; ?>
-							
+
 							<p><?php the_title(); ?> <span class="Leitura"><?php the_field('subtitle'); ?></span></p>
 						</a>
 					</li><?php
@@ -62,21 +62,9 @@ get_header();
 		endif; ?>
 
 
-	</div> <!-- Wrap -->
+	</div>
 
-</section>
+</section><?php
 
-<?php /* include "templates/extended_nav.php"; ?>
-
-	<section class="feat_project">
-		<div class="wrap">
-			<div class="feat_project_info">
-				<h2><span class="white">Featured Project:</span> Brand Redesign for Major Hospital ABC.</h2>
-				<p class="Decima">After more than 25 years without a major brand redesign, we had the opportunity to completely revamp the brand and visual identity for this 120 years old hospital.</p>
-				<p class="Decima white"><a href="#">Read the full story →</a></p>
-			</div>
-		</div>
-		<div class="transp_back_image" style="background-image: url(img/featured_single.jpg)"></div>
-	</section>
-
-<?php */ get_footer(); ?>
+	get_template_part('inc/extended_nav');
+	get_footer(); ?>

@@ -11,7 +11,6 @@
 		$img = get_post_thumbnail_id( $post->ID );
 
 		if($img){
-			$img_med = wp_get_attachment_image_src($img, 'medium');
 			$img_large = wp_get_attachment_image_src($img, 'large');
 			$img_larger = wp_get_attachment_image_src($img, 'larger');
 			$img_largest = wp_get_attachment_image_src($img, 'largest');
